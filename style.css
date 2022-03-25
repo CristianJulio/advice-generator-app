@@ -1,0 +1,76 @@
+:root {
+  --dark-blue: hsl(218, 23%, 16%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --fs-big: 1.75rem;
+  --fs-small: .8rem;
+}
+
+body {
+  align-items: center;
+  background-color: var(--dark-blue);
+  display: flex;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+}
+
+div.card {
+  background-color: var(--dark-grayish-blue);
+  border-radius: 15px;
+  padding: 50px 50px 60px 50px;
+  position: relative;
+  width: 450px;
+}
+
+div.card h2.card__advice-number {
+  color: var(--neon-green);
+  font-size: var(--fs-small);
+  letter-spacing: .2rem;
+  text-align: center;
+}
+
+div.card p.card__advice {
+  color: var(--light-cyan);
+  font-size: var(--fs-big);
+  line-height: 2.5rem;
+  margin: 30px 0;
+  text-align: center;
+}
+
+div.card button.card__button {
+  align-items: center;
+  background: var(--neon-green);
+  border-radius: 50%;
+  border: none;
+  bottom: -25px;
+  cursor: pointer;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  left: calc(50% - 27.5px);
+  position: absolute;
+  width: 55px;
+  transition: all .3s;
+}
+
+div.card button.card__button:hover {
+  box-shadow: 0 0 25px 5px var(--neon-green);
+}
+
+@media screen and (max-width: 560px) {
+
+  div.card {
+    width: 250px;
+    /* max-width: 350px; */
+  }
+
+  div.card img.card__img {
+    width: 100%;
+  }
+}
